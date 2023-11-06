@@ -25,7 +25,7 @@
 
 	body {
 		background-color: _palette(bg);
-        @include background-image("images/background-image.jpg");
+        @include background-image("images/background_image.jpg");
         //@include vendor('background-image', (
 		    //'url("images/background_image.jpg")', 
 			//'url("images/overlay.png")',
