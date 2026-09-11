@@ -35,7 +35,14 @@
 			img {
 				display: block;
 				border-radius: 100%;
-				width: 16em;
+				/* Elongated oval. The source is 4:3 landscape, so an explicit
+				   height + object-fit fills the taller frame instead of letting
+				   the ellipse clip the top and bottom of the photo.
+				   Tune: `height` for how tall, `object-position` for the focal point. */
+				width: 18em;
+				height: 22em;
+				object-fit: cover;
+				object-position: 55% center;
 			}
 		}
 
@@ -71,7 +78,8 @@
 				padding: 0.35em;
 
 				img {
-					width: 12em;
+					width: 13em;
+					height: 16em;
 				}
 			}
 		}

@@ -1,0 +1,207 @@
+///
+/// Compact header bar: name + role + links on the left, nav on the right.
+/// Used when `header_style: bar` in _config.yml.
+///
+
+/* Topbar */
+
+	.topbar {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: _misc(z-index-base);
+		width: 100%;
+		/* Sits flush on top of #main so the bar and the white panel read as one
+		   column — hence no bottom margin and square bottom corners. */
+		margin-bottom: 0;
+		padding: 0.9em 1.5em;
+		font-weight: _font(weight-bold);
+		border-radius: 0;
+
+		.topbar-inner {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			@include vendor('justify-content', 'space-between');
+			@include vendor('flex-wrap', 'wrap');
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		/* Brand: name, then role + icons on a smaller line beneath. */
+		.topbar-brand {
+			text-align: left;
+			line-height: 1.2;
+
+			h1 {
+				margin: 0;
+				font-size: 1.5em;
+				font-weight: 600;
+				letter-spacing: _font(letter-spacing);
+
+				a {
+					border-bottom: 0;
+					color: inherit;
+				}
+			}
+		}
+
+		.topbar-meta {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			@include vendor('flex-wrap', 'wrap');
+			margin-top: 0.25em;
+		}
+
+		.topbar-role {
+			font-size: 0.85em;
+			font-weight: _font(weight-bold);
+			opacity: 0.8;
+			margin-right: 0.75em;
+		}
+
+		/* Social icons: inline and small, not the big centred row. */
+		ul.icons {
+			margin: 0;
+			padding: 0;
+
+			li {
+				padding: 0 0.35em 0 0;
+
+				.icon {
+					font-size: 1em;
+					opacity: 0.7;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		/* Nav sits inside the bar, so cancel Stellar's absolute/fixed behaviour. */
+		#nav,
+		#nav.alt {
+			position: static;
+			width: auto;
+			max-width: none;
+			margin: 0;
+			padding: 0;
+			background: none;
+			border-radius: 0;
+			text-align: right;
+
+			ul li {
+				margin: 0 0 0 0.2em;
+
+				a {
+					height: 2.1em;
+					line-height: 2.1em;
+					padding: 0 0.9em;
+					font-size: 0.9em;
+					font-weight: _font(weight-bold);
+				}
+			}
+		}
+
+		& + #main {
+			padding-top: 0;
+		}
+	}
+
+	/* Dark bar: light text, Stellar's default (light) icon treatment works as-is. */
+	.topbar.is-dark {
+		background-color: transparentize(darken(_palette(bg), 14%), 0.04);
+		color: _palette(fg-bold);
+
+		.topbar-brand h1 a,
+		.topbar-role {
+			color: _palette(fg-bold);
+		}
+
+		#nav ul li a {
+			color: _palette(fg-bold);
+
+			&:hover {
+				background-color: _palette(border-bg);
+			}
+
+			&.active {
+				background-color: _palette(border2-bg);
+				box-shadow: none;
+			}
+		}
+	}
+
+	/* Light bar: dark text, and icons recoloured for a pale background —
+	   without this they inherit white-on-white and vanish. */
+	.topbar.is-light {
+		@include color-typography(invert);
+		@include color-icon(invert);
+		background-color: transparentize(_palette(invert, bg-alt), 0.03);
+
+		.topbar-brand h1 a,
+		.topbar-role {
+			color: _palette(invert, fg-bold);
+		}
+
+		#nav ul li a {
+			color: _palette(invert, fg-bold);
+
+			&:hover {
+				background-color: _palette(invert, border-bg);
+			}
+
+			&.active {
+				background-color: _palette(invert, bg);
+				box-shadow: none;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		.topbar {
+			padding: 0.8em 1.25em;
+
+			.topbar-brand h1 {
+				font-size: 1.3em;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.topbar {
+			position: relative;
+			padding: 1em;
+
+			.topbar-inner {
+				@include vendor('flex-direction', 'column');
+				@include vendor('align-items', 'flex-start');
+			}
+
+			/* Stellar hides #nav entirely on small; keep it visible here since
+			   there is no off-canvas menu in this theme build. */
+			#nav,
+			#nav.alt {
+				display: block;
+				width: 100%;
+				margin-top: 0.75em;
+				text-align: left;
+
+				ul li {
+					margin: 0 0.2em 0.2em 0;
+
+					a {
+						padding: 0 0.7em;
+						font-size: 0.85em;
+					}
+				}
+			}
+		}
+	}
+
+	/* Square off the top of the white panel where the bar meets it.
+	   Scoped to the bar layout so the centred header is unaffected. */
+	body.header-bar #main {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}

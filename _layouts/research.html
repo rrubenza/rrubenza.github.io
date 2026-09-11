@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section id="content" class="main">
+	{% if page.image %}
+	<span class="image main"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" /></span>
+	{% endif %}
+
+	{% if page.blurb %}<p><strong>{{ page.blurb }}</strong></p>{% endif %}
+
+	{{ content }}
+
+	<ul class="actions">
+		{% if page.link and page.link != "#" %}
+		<li><a href="{{ page.link }}" class="button special">{{ page.link_text | default: "Read the paper" }}</a></li>
+		{% endif %}
+		<li><a href="{{ '/#research' | relative_url }}" class="button">Back to research</a></li>
+	</ul>
+</section>

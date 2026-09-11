@@ -1,2 +1,51 @@
+# Site identity — used for <meta> tags and link previews.
+title: Ryan Rubenzahl
+url: "https://rrubenza.github.io"
+description: >-
+  Ryan Rubenzahl is a Flatiron Research Fellow working on extremely precise radial
+  velocities, stellar variability, and the search for Earth-like exoplanets.
+og_image: /images/me_socal.jpg
+
 sass:
   sass_dir: assets/sass
+
+# Homepage header style. Restart the server after changing this.
+#   bar      — compact bar: name + role + links top-left, nav top-right
+#   centered — original Stellar: large centred name with the nav below
+header_style: bar
+
+# Colour scheme for the `bar` header:
+#   dark  — deep plum bar with light text
+#   light — the original near-white bar with dark text
+header_theme: dark
+
+# Repo docs shouldn't become web pages. The github-pages gem bundles
+# jekyll-optional-front-matter, which otherwise renders any stray .md file.
+# (Listing `exclude` replaces Jekyll's defaults, so they're repeated here.)
+exclude:
+  - README.md
+  - TODO.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
+
+# Research entries live in _research/<category>/<name>.md and are published at
+# /research/<category>/<name>/. Add a file, it appears on the site — no HTML needed.
+collections:
+  research:
+    # output: false — entries still power the homepage tabs, but no separate
+    # page is generated for each one. Flip to true to publish them at
+    # /research/<category>/<name>/ (the body text below each front matter
+    # becomes that page). Also un-publish research.md if you do.
+    output: false
+    permalink: /research/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research

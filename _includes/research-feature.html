@@ -1,0 +1,35 @@
+{%- comment -%}
+  One research entry, as a wide row: image on one side, text beside it.
+
+  Front matter it understands:
+    blurb                     supports Markdown: [text](url), **bold**, *italic*
+    link / link_text          the primary (accent) button — omit for none
+    links_title               optional heading above the button row, e.g. "Read more"
+    links:                    optional extra buttons, each either
+      - text: WASP-107 b        { text:, url:   <any URL> }
+        url:  https://…         { text:, entry: <slug of another entry> }  ← cross-link
+{%- endcomment -%}
+{%- assign item = include.item -%}
+<div class="research-feature" id="entry-{{ item.slug }}" data-entry-category="{{ item.category }}">
+    <div class="research-feature-image">
+        <img src="{{ item.image | default: '/images/placeholder.svg' | relative_url }}"
+             alt="{{ item.image_alt | default: item.title }}" />
+    </div>
+    <div class="research-feature-content">
+        <h3>{{ item.title }}</h3>
+        {{ item.blurb | markdownify }}
+        {%- if item.links_title %}
+        <h4 class="research-links-title">{{ item.links_title }}</h4>
+        {%- endif %}
+        {%- if item.link or item.links %}
+        <ul class="actions">
+            {%- if item.link %}
+            <li><a href="{{ item.link }}" class="button special">{{ item.link_text | default: "Read the paper" }}</a></li>
+            {%- endif %}
+            {%- for extra in item.links %}
+            <li><a href="{% if extra.entry %}#entry-{{ extra.entry }}{% else %}{{ extra.url }}{% endif %}" class="button">{{ extra.text }}</a></li>
+            {%- endfor %}
+        </ul>
+        {%- endif %}
+    </div>
+</div>

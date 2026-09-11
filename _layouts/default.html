@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+{% include head.html %}
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>{{ page.title | default: "Ryan Rubenzahl, Ph.D." }}</h1>
+						{% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+					</header>
+
+				<!-- Nav -->
+{% include nav.html %}
+
+				<!-- Main -->
+					<div id="main">
+{{ content }}
+					</div>
+
+				<!-- Footer -->
+{% include footer.html %}
+
+			</div>
+
+		<!-- Scripts -->
+{% include scripts.html %}
+
+	</body>
+</html>

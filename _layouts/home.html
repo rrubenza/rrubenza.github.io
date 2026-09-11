@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+{% include head.html %}
+	</head>
+	<body class="header-{{ site.header_style | default: 'bar' }}">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{% if site.header_style == 'centered' %}
+{% include header-centered.html %}
+				{% else %}
+{% include header-bar.html %}
+				{% endif %}
+
+				<!-- Main -->
+					<div id="main">
+{{ content }}
+					</div>
+
+				<!-- Footer -->
+{% include footer.html %}
+
+			</div>
+
+		<!-- Scripts -->
+{% include scripts.html %}
+			<script src="{{ '/assets/js/research-tabs.js' | relative_url }}"></script>
+
+	</body>
+</html>

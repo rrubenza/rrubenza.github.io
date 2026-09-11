@@ -1,0 +1,50 @@
+<!-- Research Section -->
+<section id="research" class="main special">
+<header class="major">
+<h2>Research Highlights</h2>
+</header>
+
+<div class="research" data-research>
+
+<!-- Category tabs -->
+<ul class="research-tabs">
+{%- for cat in site.data.research %}
+<li>
+<button type="button"
+class="research-tab"
+id="tab-{{ cat.slug }}"
+aria-controls="panel-{{ cat.slug }}"
+aria-expanded="false"
+data-tab="{{ cat.slug }}">
+<span class="research-tab-image">
+<img src="{{ cat.image | relative_url }}" alt="" />
+</span>
+<span class="research-tab-title">{{ cat.title }}</span>
+</button>
+</li>
+{%- endfor %}
+</ul>
+
+<!-- Category panels -->
+{%- for cat in site.data.research %}
+{%- assign items = site.research | where: "category", cat.slug | sort: "order" %}
+<div class="research-panel"
+ id="panel-{{ cat.slug }}"
+ role="region"
+ aria-labelledby="tab-{{ cat.slug }}"
+ data-panel="{{ cat.slug }}">
+{%- if cat.tagline %}
+<p class="research-tagline">{{ cat.tagline }}</p>
+{%- endif %}
+{%- if items.size > 0 %}
+{%- for item in items %}
+{% include research-feature.html item=item %}
+{%- endfor %}
+{%- else %}
+<p>Nothing here yet.</p>
+{%- endif %}
+</div>
+{%- endfor %}
+
+</div>
+</section>

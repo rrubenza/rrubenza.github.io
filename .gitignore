@@ -1,2 +1,11 @@
-.sass-cache
+# Jekyll build output and caches
 _site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Bundler — only appear if you set a local gem path, but keep them out regardless
+vendor
+.bundle
+
+.DS_Store

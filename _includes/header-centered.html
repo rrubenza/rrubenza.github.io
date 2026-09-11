@@ -1,0 +1,13 @@
+<!-- Header -->
+	<header id="header" class="alt">
+		<h1>{{ site.author_name | default: "Ryan Rubenzahl, Ph.D." }}</h1>
+		<h2>{{ site.author_role | default: "Flatiron Research Fellow" }}</h2>
+{% include social.html %}
+	</header>
+
+<!-- Nav -->
+	<nav id="nav">
+		<ul>
+{% include nav-links.html %}
+		</ul>
+	</nav>

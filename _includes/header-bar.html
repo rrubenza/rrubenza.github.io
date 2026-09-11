@@ -1,0 +1,17 @@
+<!-- Header bar -->
+	<div class="topbar is-{{ site.header_theme | default: 'dark' }}">
+		<div class="topbar-inner">
+			<div class="topbar-brand">
+				<h1><a href="#intro">{{ site.author_name | default: "Ryan Rubenzahl, Ph.D." }}</a></h1>
+				<div class="topbar-meta">
+					<span class="topbar-role">{{ site.author_role | default: "Flatiron Research Fellow" }}</span>
+{% include social.html %}
+				</div>
+			</div>
+			<nav id="nav" class="topbar-nav">
+				<ul>
+{% include nav-links.html %}
+				</ul>
+			</nav>
+		</div>
+	</div>
