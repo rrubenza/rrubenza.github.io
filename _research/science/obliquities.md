@@ -2,7 +2,7 @@
 title:    Obliquities
 category: science
 order:    2
-blurb:    "The stellar obliquities of close-in oddball systems like hot Jupiters and ultra low density super Neptunes, particularly when they have outer companions, give a key clue to how they could have formed. Using HIRES to observe the Rossiter-McLaughlin effect, I found the keystone super-puff WASP-107 b is on a polar orbit, a clear sign of a dynamic migration history. Similarly with KPF I found the ultra-hot Jupiter KELT-18 b is also on a polar orbit. Despite its high eccentricity (0.84), I found Kepler 1656 b to likely be in an aligned/low obliquity configuration. All three have outer companions that drive unique dynamics in each system."
+blurb:    "The stellar obliquities of close-in oddball systems like hot Jupiters and ultra low density super Neptunes, particularly when they have outer companions, give a key clue to how they could have formed. Using HIRES to observe the Rossiter-McLaughlin effect, I found the keystone super-puff WASP-107 b is on a polar orbit, a clear sign of a dynamic migration history. Similarly with KPF I found the ultra-hot Jupiter KELT-18 b is also on a polar orbit. Despite its high eccentricity (0.84), I found Kepler 1656 b to likely be in an aligned/low obliquity configuration. All three have outer companions that drive migratory dynamics in each system."
 image:    /images/obliquity_thumbnail.png
 image_alt: "PLACEHOLDER — key plot or animation for Obliquities."
 links_title: Read more about each system
