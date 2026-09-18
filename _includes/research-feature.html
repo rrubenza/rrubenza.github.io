@@ -2,6 +2,7 @@
   One research entry, as a wide row: image on one side, text beside it.
 
   Front matter it understands:
+    image_alt                 alt text, also shown as the hover tooltip
     blurb                     supports Markdown: [text](url), **bold**, *italic*
     link / link_text          the primary (accent) button — omit for none
     links_title               optional heading above the button row, e.g. "Read more"
@@ -13,7 +14,8 @@
 <div class="research-feature" id="entry-{{ item.slug }}" data-entry-category="{{ item.category }}">
     <div class="research-feature-image">
         <img src="{{ item.image | default: '/images/placeholder.svg' | relative_url }}"
-             alt="{{ item.image_alt | default: item.title }}" />
+             alt="{{ item.image_alt | default: item.title }}"
+             title="{{ item.image_alt | default: item.title }}" />
     </div>
     <div class="research-feature-content">
         <h3>{{ item.title }}</h3>
