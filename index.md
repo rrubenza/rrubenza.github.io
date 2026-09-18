@@ -50,8 +50,7 @@ velocity spectrographs work and why stellar activity is such a big problem.
 <li>
 <span class="image"><img src="{{ '/images/cgpu.png' | relative_url }}" width="300px" alt="CGPU logo" title="CGPU logo" /></span>
 <div markdown="1">
-I'm a founding member of [Caltech Grads and Postdocs United](https://caltechgpu.org/), the
-active effort at Caltech to form a labor union for graduate and postdoctoral researchers.
+I'm a founding member of [Caltech Grads and Postdocs United](https://caltechgpu.org/), the labor union for graduate and postdoctoral researchers at Caltech. 
 Please reach out if you have unionization questions and/or are interested in forming a
 higher-ed labor union at your institution!
 </div>
@@ -61,8 +60,7 @@ higher-ed labor union at your institution!
 <div markdown="1">
 I believe we can all do our best work when economic barriers to living and working in the US
 are removed. That's why I and other Caltech grad students helped collect over 15,000 signatures
-to win [the strongest rent control and just-cause eviction protections in the country](https://pasadena4rentcontrol.org/),
-right here in Pasadena CA.
+to win [the strongest rent control and just-cause eviction protections in the country](https://pasadena4rentcontrol.org/) in Pasadena CA.
 </div>
 </li>
 </ul>
