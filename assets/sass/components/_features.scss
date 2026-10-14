@@ -58,3 +58,95 @@
 			}
 		}
 	}
+
+	/* --- Local additions (not part of stock Stellar) -----------------------
+
+	   Width modifiers. Stock Stellar makes every `.features li` one third of
+	   the row; these let a single item take more so items of different weight
+	   can sit side by side. Stellar's own breakpoints still collapse
+	   everything to 1-up on phones.
+
+	       <li class="w-twothirds">   two thirds
+	       <li class="w-half">        half
+	       <li class="w-full">        the whole row
+	       <li>                       one third (the default)
+	*/
+
+	.features {
+		li.w-half       { width: calc(50% - #{_size(element-margin)}); }
+		li.w-twothirds  { width: calc(66.6666% - #{_size(element-margin)}); }
+		li.w-full       { width: calc(100% - #{_size(element-margin)}); }
+
+		/* The embedded video is a fixed-size iframe; make it fill whatever
+		   column it lands in rather than overflowing a narrow one. */
+		iframe {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			border: 0;
+		}
+
+		/* A logo rather than a photo: scales with the card but is capped by an
+		   inline `max-width` per image, since logos differ wildly in aspect and
+		   look wrong stretched to the full column. Centred in its card. */
+		.image.logo {
+			display: block;
+			margin: 0 auto (_size(element-margin) * 0.75);
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		/* Two photos side by side, same height, nothing cropped.
+
+		   The trick: flex-basis 0 with flex-grow set to each image's aspect
+		   ratio makes the widths proportional to the aspects, which means the
+		   heights come out equal automatically — at any container width, with
+		   no fixed height and no cropping. Set `--ar` per image inline. */
+		.image-pair {
+			@include vendor('display', 'flex');
+			@include vendor('flex-wrap', 'wrap');
+			@include vendor('align-items', 'flex-start');
+			margin-bottom: (_size(element-margin) * 0.75);
+
+			.image {
+				@include vendor('flex', '1 1 0');
+				flex-grow: var(--ar, 1);
+				min-width: 0;
+				margin-right: (_size(element-margin) * 0.5);
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			/* Phones: stack them, each full width. */
+			@include breakpoint(small) {
+				.image {
+					@include vendor('flex', '1 1 100%');
+					margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(medium) {
+			li.w-twothirds,
+			li.w-full {
+				width: calc(100% - #{_size(element-margin)});
+			}
+		}
+	}

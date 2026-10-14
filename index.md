@@ -27,17 +27,28 @@ I recieved my PhD from Caltech in 2024 where I built the Solar Calibrator (SoCal
 <section id="outreach" class="main special">
 <header class="major"><h2>Outreach</h2></header>
 <ul class="features">
-<li>
-<span class="image"><img src="{{ '/images/mercury_transit.jpg' | relative_url }}" height="200px" alt="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" title="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" /></span>
+<li class="w-twothirds">
+<div class="image-pair">
+<span class="image" style="--ar: 1.26"><img src="{{ '/images/mercury_transit.jpg' | relative_url }}" alt="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" title="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" /></span>
+<span class="image" style="--ar: 0.75"><img src="{{ '/images/outreach_moontree_2026.JPG' | relative_url }}" alt="Safely observing the sun in NYC with some solar binoculars." title="Safely observing the sun in NYC with some solar binoculars." /></span>
+</div>
 <div markdown="1">
 I love sharing the universe with anyone who is interested, especially through "sidewalk observing" events be it day or night.
 </div>
 </li>
-<li>
-<iframe width="350" height="200" src="https://www.youtube.com/embed/7A9c5IEzM0w"></iframe>
+<li class="w-third">
+<iframe src="https://www.youtube.com/embed/7A9c5IEzM0w" title="Public lecture on radial velocity spectrographs" allowfullscreen></iframe>
 <div markdown="1">
 I gave a public lecture for CaltechAstro outreach on our YouTube channel about how radial
 velocity spectrographs work and why stellar activity is such a big problem.
+</div>
+</li>
+<li class="w-twothirds">
+<div class="image-pair">
+<span class="image" style="--ar: 1.50"><img src="{{ '/images/outreach_earthscience_2026.jpg' | relative_url }}" alt='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' title='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' /></span>
+</div>
+<div markdown="1">
+Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd graders and high school Earth science students.
 </div>
 </li>
 </ul>
@@ -47,16 +58,16 @@ velocity spectrographs work and why stellar activity is such a big problem.
 <section id="organizing" class="main special">
 <header class="major"><h2>Community Organizing</h2></header>
 <ul class="features">
-<li>
-<span class="image"><img src="{{ '/images/cgpu.png' | relative_url }}" width="300px" alt="CGPU logo" title="CGPU logo" /></span>
+<li class="w-half">
+<span class="image logo" style="max-width: 100%"><img src="{{ '/images/cgpu.png' | relative_url }}" alt="CGPU logo" title="CGPU logo" /></span>
 <div markdown="1">
 I'm a founding member of [Caltech Grads and Postdocs United](https://caltechgpu.org/), the labor union for graduate and postdoctoral researchers at Caltech. 
 Please reach out if you have unionization questions and/or are interested in forming a
 higher-ed labor union at your institution!
 </div>
 </li>
-<li>
-<span class="image"><img src="{{ '/images/yesonH.png' | relative_url }}" height="100px" alt="Pasadena Measure H" title="Pasadena Measure H" /></span>
+<li class="w-half">
+<span class="image logo" style="max-width: 12em"><img src="{{ '/images/yesonH.png' | relative_url }}" alt="Pasadena Measure H" title="Pasadena Measure H" /></span>
 <div markdown="1">
 I believe we can all do our best work when economic barriers to living and working in the US
 are removed. That's why I and other Caltech grad students helped collect over 15,000 signatures
