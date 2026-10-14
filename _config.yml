@@ -4,7 +4,7 @@ url: "https://rrubenza.github.io"
 description: >-
   Ryan Rubenzahl is a Flatiron Research Fellow working on extremely precise radial
   velocities, stellar variability, and the search for Earth-like exoplanets.
-og_image: /images/me_socal.jpg
+og_image: /images/site/me_socal.jpg
 
 sass:
   sass_dir: assets/sass
@@ -35,6 +35,10 @@ exclude:
 # Research entries live in _research/<category>/<name>.md and are published at
 # /research/<category>/<name>/. Add a file, it appears on the site — no HTML needed.
 collections:
+  # Blog / term-project entries. Each file is one card on /blog/.
+  blog:
+    output: false
+
   research:
     # output: false — entries still power the homepage tabs, but no separate
     # page is generated for each one. Flip to true to publish them at

@@ -4,23 +4,23 @@
 - slug: hardware
   title: Hardware
   tagline: I was part of the Keck Planet Finder (KPF) AI&T and commissioning teams. My main contribution to KPF was the Solar Calibrator (SoCal), which you can learn more about below.
-  image: /images/kpf_ait_ssl.jpg
+  image: /images/research/kpf_ait_ssl.jpg
   image_alt: The Keck Planet Finder (KPF) during alignment, integration, and testing and UC Berkeley Space Sciences Laboratory.
 
 - slug: software
   title: Software
   tagline: Here are some of the open-source tools I have written and maintain for working with astronomical data.
-  image: /images/smolgp-logo.png
+  image: /images/research/smolgp-logo.png
   image_alt: smolgp logo.
 
 - slug: statistics
   title: Statistics
   tagline: I am generally interested in all things Bayesian^TM, but I have a particular interest in Gaussian Processes and their applications to astronomy.
-  image: /images/covariance.gif
+  image: /images/research/covariance.gif
   image_alt: Samples from a Gaussian Process.
 
 - slug: science
   title: Science
   tagline: My science interests are broadly exoplanet detection and characterization with the radial velocity technique. That means orbits, obliquities, masses, and demographics, but also survey design and optimization. That also means contending with stellar variability, which is best understood on the Sun.
-  image: /images/exoearth.jpg
+  image: /images/research/exoearth.jpg
   image_alt: An Earth-like exoplanet.
