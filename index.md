@@ -30,7 +30,7 @@ I recieved my PhD from Caltech in 2024 where I built the Solar Calibrator (SoCal
 <li class="w-twothirds">
 <div class="image-pair">
 <span class="image" style="--ar: 1.26"><img src="{{ '/images/mercury_transit.jpg' | relative_url }}" alt="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" title="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" /></span>
-<span class="image" style="--ar: 0.75"><img src="{{ '/images/outreach_moontree_2026.JPG' | relative_url }}" alt="Safely observing the sun in NYC with some solar binoculars." title="Safely observing the sun in NYC with some solar binoculars." /></span>
+<span class="image" style="--ar: 0.75"><img src="{{ '/images/outreach_moontree_2026.jpg' | relative_url }}" alt="Safely observing the sun in NYC with some solar binoculars." title="Safely observing the sun in NYC with some solar binoculars." /></span>
 </div>
 <div markdown="1">
 I love sharing the universe with anyone who is interested, especially through "sidewalk observing" events be it day or night.
