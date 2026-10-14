@@ -1,0 +1,69 @@
+{%- comment -%}
+  One blog / term-project entry, as a wide row. Expects: include.item
+
+  Front matter it understands:
+    title         heading
+    subtitle      one-line context, shown under the title
+    description   optional longer write-up (Markdown)
+    image         optional single figure; omit it and the text fills the row
+    images        optional list of figures, stacked: - src: /path
+                    alt: "…"
+    image_alt     alt text, also the hover tooltip
+    link          where the button goes (PDF, page, anything)
+    link_text     the button label
+    links         several buttons:
+                    - text: "Read the paper (PDF)"
+                      url:  /path/to.pdf
+                    - text: "Notebook"
+                      url:  /path/to.nb
+                      variant: notebook    # colour variant; omit for the default
+    order         position in the list
+{%- endcomment -%}
+{%- assign item = include.item -%}
+<div class="feature-row">
+    {%- if item.images or item.image %}
+    <div class="feature-row-image">
+        {%- comment -%}
+          Build the optional sizing up front rather than branching inside the
+          <img> tag — editors lint the tag as plain HTML and flag Liquid there.
+        {%- endcomment -%}
+        {%- if item.images %}
+        {%- for pic in item.images %}
+        {%- assign style = "" -%}
+        {%- if pic.height %}{%- assign style = "height: " | append: pic.height | append: "; width: auto;" -%}
+        {%- elsif pic.width %}{%- assign style = "max-width: " | append: pic.width | append: ";" -%}
+        {%- endif -%}
+        {%- assign alt = pic.alt | default: item.title -%}
+        <img src="{{ pic.src | relative_url }}" alt="{{ alt }}" title="{{ alt }}" style="{{ style }}" />
+        {%- endfor %}
+        {%- else %}
+        {%- assign style = "" -%}
+        {%- if item.image_height %}{%- assign style = "height: " | append: item.image_height | append: "; width: auto;" -%}
+        {%- elsif item.image_width %}{%- assign style = "max-width: " | append: item.image_width | append: ";" -%}
+        {%- endif -%}
+        {%- assign alt = item.image_alt | default: item.title -%}
+        <img src="{{ item.image | relative_url }}" alt="{{ alt }}" title="{{ alt }}" style="{{ style }}" />
+        {%- endif %}
+    </div>
+    {%- endif %}
+    <div class="feature-row-content">
+        <h3>{{ item.title }}</h3>
+        {%- if item.subtitle %}
+        <p class="feature-row-subtitle">{{ item.subtitle }}</p>
+        {%- endif %}
+        {%- if item.description %}
+        {{ item.description | markdownify }}
+        {%- endif %}
+        {%- if item.link or item.links %}
+        <ul class="actions">
+            {%- if item.link %}
+            <li><a href="{{ item.link | relative_url }}" class="button special">{{ item.link_text | default: "Read more" }}</a></li>
+            {%- endif %}
+            {%- for l in item.links %}
+            {%- assign variant = l.variant | default: "special" -%}
+            <li><a href="{{ l.url | relative_url }}" class="button {{ variant }}">{{ l.text }}</a></li>
+            {%- endfor %}
+        </ul>
+        {%- endif %}
+    </div>
+</div>

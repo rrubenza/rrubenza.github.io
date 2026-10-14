@@ -1,0 +1,107 @@
+///
+/// A wide content row: image on one side, text beside it.
+/// Shared by the research highlights and the blog/project listing.
+///
+
+/* Feature row */
+
+	.feature-row {
+		@include vendor('display', 'flex');
+		@include vendor('align-items', 'center');
+		text-align: left;
+		margin-bottom: (_size(element-margin) * 1.5);
+		padding-bottom: (_size(element-margin) * 1.5);
+		border-bottom: solid 1px _palette(border);
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.feature-row-image {
+			@include vendor('flex', '0 0 auto');
+			width: 40%;
+			max-width: 24em;
+			margin-right: 2.5em;
+
+			img {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: _size(border-radius);
+			}
+
+			/* Several figures stacked in one column: same width, spaced apart. */
+			img + img {
+				margin-top: (_size(element-margin) * 0.5);
+			}
+		}
+
+		.feature-row-content {
+			@include vendor('flex', '1');
+
+			h3 {
+				font-size: 1.35em;
+			}
+
+			.feature-row-subtitle {
+				margin-bottom: (_size(element-margin) * 0.5);
+				font-size: 0.95em;
+				opacity: 0.75;
+			}
+
+			.feature-links-title {
+				margin-bottom: (_size(element-margin) * 0.35);
+				font-size: 0.9em;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				opacity: 0.75;
+			}
+
+			/* Let buttons size to their label so several fit on one row. */
+			.actions .button {
+				min-width: 0;
+			}
+
+			/* Colour variant for non-paper links (e.g. Mathematica notebooks),
+			   so they read as a different kind of thing from the PDF buttons.
+			   Change $notebook-accent to recolour. */
+			.actions .button.notebook {
+				$notebook-accent: #e8a33d;
+				background-color: $notebook-accent;
+				color: #20304d !important;
+				box-shadow: none;
+
+				&:hover {
+					background-color: lighten($notebook-accent, 6);
+				}
+
+				&:active {
+					background-color: darken($notebook-accent, 6);
+				}
+			}
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint(medium) {
+			@include vendor('flex-direction', 'column');
+			text-align: center;
+
+			.feature-row-image {
+				width: 100%;
+				max-width: 20em;
+				margin: 0 auto _size(element-margin) auto;
+			}
+
+			.feature-row-content {
+				@include vendor('flex', '0 1 auto');
+				width: 100%;
+			}
+		}
+	}
