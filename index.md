@@ -17,7 +17,7 @@ the individual pixel level.
 I recieved my PhD from Caltech in 2024 where I built the Solar Calibrator (SoCal) for KPF and explored the origins of close-in giant planets such as WASP-107 b, KELT-18 b, and Kepler-1656 b by measuring their stellar obliquities. More broadly, I use the radial velocity (RV) technique to understand the demographics of exoplanets across our galaxy and advance the technique to be sensitive to Earth-Sun analogs. I am a member of the [Terra Hunting Experiment](https://www.terrahunting.org/) (THE) which will soon be starting a decade long survey with the new HARPS-3 spectrograph to search for Earth-like exoplanets around the nearest Sun-like stars.
 
 </div>
-<span class="image"><img src="{{ '/images/me_socal.jpg' | relative_url }}" alt="Me, pointing at my PhD thesis instrument, the Solar Calibrator (SoCal)." title="Me, pointing at my PhD thesis instrument, the Solar Calibrator (SoCal)." /></span>
+<span class="image"><img src="{{ '/images/site/me_socal.jpg' | relative_url }}" alt="Me, pointing at my PhD thesis instrument, the Solar Calibrator (SoCal)." title="Me, pointing at my PhD thesis instrument, the Solar Calibrator (SoCal)." /></span>
 </div>
 </section>
 
@@ -29,8 +29,8 @@ I recieved my PhD from Caltech in 2024 where I built the Solar Calibrator (SoCal
 <ul class="features">
 <li class="w-twothirds">
 <div class="image-pair">
-<span class="image" style="--ar: 1.26"><img src="{{ '/images/mercury_transit.jpg' | relative_url }}" alt="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" title="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" /></span>
-<span class="image" style="--ar: 0.75"><img src="{{ '/images/outreach_moontree_2026.jpg' | relative_url }}" alt="Safely observing the sun in NYC with some solar binoculars." title="Safely observing the sun in NYC with some solar binoculars." /></span>
+<span class="image" style="--ar: 1.26"><img src="{{ '/images/outreach/mercury_transit.jpg' | relative_url }}" alt="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" title="Showing a local Pasadena family the November 11, 2019 Mercury transit through my telescope + solar filter" /></span>
+<span class="image" style="--ar: 0.75"><img src="{{ '/images/outreach/outreach_moontree_2026.jpg' | relative_url }}" alt="Safely observing the sun in NYC with some solar binoculars." title="Safely observing the sun in NYC with some solar binoculars." /></span>
 </div>
 <div markdown="1">
 I love sharing the universe with anyone who is interested, especially through "sidewalk observing" events be it day or night.
@@ -45,7 +45,7 @@ velocity spectrographs work and why stellar activity is such a big problem.
 </li>
 <li class="w-twothirds">
 <div class="image-pair">
-<span class="image" style="--ar: 1.50"><img src="{{ '/images/outreach_earthscience_2026.jpg' | relative_url }}" alt='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' title='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' /></span>
+<span class="image" style="--ar: 1.50"><img src="{{ '/images/outreach/outreach_earthscience_2026.jpg' | relative_url }}" alt='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' title='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' /></span>
 </div>
 <div markdown="1">
 Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd graders and high school Earth science students.
@@ -59,7 +59,7 @@ Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd
 <header class="major"><h2>Community Organizing</h2></header>
 <ul class="features">
 <li class="w-half">
-<span class="image logo" style="max-width: 100%"><img src="{{ '/images/cgpu.png' | relative_url }}" alt="CGPU logo" title="CGPU logo" /></span>
+<span class="image logo" style="max-width: 100%"><img src="{{ '/images/organizing/cgpu.png' | relative_url }}" alt="CGPU logo" title="CGPU logo" /></span>
 <div markdown="1">
 I'm a founding member of [Caltech Grads and Postdocs United](https://caltechgpu.org/), the labor union for graduate and postdoctoral researchers at Caltech. 
 Please reach out if you have unionization questions and/or are interested in forming a
@@ -67,7 +67,7 @@ higher-ed labor union at your institution!
 </div>
 </li>
 <li class="w-half">
-<span class="image logo" style="max-width: 12em"><img src="{{ '/images/yesonH.png' | relative_url }}" alt="Pasadena Measure H" title="Pasadena Measure H" /></span>
+<span class="image logo" style="max-width: 12em"><img src="{{ '/images/organizing/yesonH.png' | relative_url }}" alt="Pasadena Measure H" title="Pasadena Measure H" /></span>
 <div markdown="1">
 I believe we can all do our best work when economic barriers to living and working in the US
 are removed. That's why I and other Caltech grad students helped collect over 15,000 signatures
