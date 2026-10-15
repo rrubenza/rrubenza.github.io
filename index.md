@@ -48,7 +48,7 @@ velocity spectrographs work and why stellar activity is such a big problem.
 <span class="image" style="--ar: 1.50"><img src="{{ '/images/outreach/outreach_earthscience_2026.jpg' | relative_url }}" alt='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' title='"Talking space" with high-schoolers at my alma mater, Lowville Academy.' /></span>
 </div>
 <div markdown="1">
-Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd graders and high school Earth science students.
+Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd graders and high school Earth & Space Science students.
 </div>
 </li>
 </ul>
