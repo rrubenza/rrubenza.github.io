@@ -25,22 +25,25 @@
 			}
 		}
 
+		/* Tall rounded rectangle rather than an oval: the corners aren't clipped,
+		   so more of the photo survives in the same footprint.
+		   Tune: $photo-radius for corner softness, the img width/height for the
+		   shape, and object-position for which part of the photo is kept. */
+		$photo-radius: 2em;
+		$photo-pad: 0.65em;
+
 		.image {
 			display: inline-block;
 			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
+			padding: $photo-pad;
+			border-radius: ($photo-radius + $photo-pad);
 			border: solid 1px;
 
 			img {
 				display: block;
-				border-radius: 100%;
-				/* Elongated oval. The source is 4:3 landscape, so an explicit
-				   height + object-fit fills the taller frame instead of letting
-				   the ellipse clip the top and bottom of the photo.
-				   Tune: `height` for how tall, `object-position` for the focal point. */
+				border-radius: $photo-radius;
 				width: 18em;
-				height: 22em;
+				height: 24em;
 				object-fit: cover;
 				object-position: 55% center;
 			}
@@ -76,10 +79,11 @@
 		@include breakpoint(small) {
 			.image {
 				padding: 0.35em;
+				border-radius: ($photo-radius + 0.35em);
 
 				img {
 					width: 13em;
-					height: 16em;
+					height: 17em;
 				}
 			}
 		}
