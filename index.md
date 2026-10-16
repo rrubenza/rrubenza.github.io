@@ -51,6 +51,12 @@ velocity spectrographs work and why stellar activity is such a big problem.
 Each year I visit my K-12 alma mater, Lowville Academy, to "talk space" with 3rd graders and high school Earth & Space Science students.
 </div>
 </li>
+<li class="w-third">
+<iframe src="https://www.youtube.com/embed/k_pPuBPcVuU" title="AAS Journal Author Series" allowfullscreen></iframe>
+<div markdown="1">
+I chatted with Frank Timmes for the AAS Journal Author Series on our measurement of the tilted orbit of KELT-18 b.
+</div>
+</li>
 </ul>
 </section>
 
