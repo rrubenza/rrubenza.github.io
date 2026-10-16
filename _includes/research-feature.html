@@ -11,17 +11,37 @@
         url:  https://…         { text:, entry: <slug of another entry> }  ← cross-link
 {%- endcomment -%}
 {%- assign item = include.item -%}
-<div class="research-feature" id="entry-{{ item.slug }}" data-entry-category="{{ item.category }}">
-    <div class="research-feature-image">
-        <img src="{{ item.image | default: '/images/placeholder.svg' | relative_url }}"
-             alt="{{ item.image_alt | default: item.title }}"
-             title="{{ item.image_alt | default: item.title }}" />
+<div class="feature-row" id="entry-{{ item.slug }}" data-entry-category="{{ item.category }}">
+    {%- if item.images or item.image %}
+    <div class="feature-row-image">
+        {%- comment -%}
+          Build the optional sizing up front rather than branching inside the
+          <img> tag — editors lint the tag as plain HTML and flag Liquid there.
+        {%- endcomment -%}
+        {%- if item.images %}
+        {%- for pic in item.images %}
+        {%- assign style = "" -%}
+        {%- if pic.height %}{%- assign style = "height: " | append: pic.height | append: "; width: auto;" -%}
+        {%- elsif pic.width %}{%- assign style = "max-width: " | append: pic.width | append: ";" -%}
+        {%- endif -%}
+        {%- assign alt = pic.alt | default: item.title -%}
+        <img src="{{ pic.src | relative_url }}" alt="{{ alt }}" title="{{ alt }}" style="{{ style }}" />
+        {%- endfor %}
+        {%- else %}
+        {%- assign style = "" -%}
+        {%- if item.image_height %}{%- assign style = "height: " | append: item.image_height | append: "; width: auto;" -%}
+        {%- elsif item.image_width %}{%- assign style = "max-width: " | append: item.image_width | append: ";" -%}
+        {%- endif -%}
+        {%- assign alt = item.image_alt | default: item.title -%}
+        <img src="{{ item.image | relative_url }}" alt="{{ alt }}" title="{{ alt }}" style="{{ style }}" />
+        {%- endif %}
     </div>
-    <div class="research-feature-content">
+    {%- endif %}
+    <div class="feature-row-content">
         <h3>{{ item.title }}</h3>
         {{ item.blurb | markdownify }}
         {%- if item.links_title %}
-        <h4 class="research-links-title">{{ item.links_title }}</h4>
+        <h4 class="feature-links-title">{{ item.links_title }}</h4>
         {%- endif %}
         {%- if item.link or item.links %}
         <ul class="actions">
